@@ -1,0 +1,11 @@
+
+services:
+
+  app:
+    image: ghcr.io/otey247/sleeper-analytics-weekly-report:17.0.3
+    platform: linux/amd64
+    ports:
+      - "5001:5000"
+    volumes:
+      - /etc/localtime:/etc/localtime # sync container timezone with host
+      - .:/opt/sawr # mount host repository directory
